@@ -1,4 +1,44 @@
+# -----------------------
+# macOS system files
+# -----------------------
 .DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# -----------------------
+# Python
+# -----------------------
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.env
+.venv/
+env/
+venv/
+.Python
+*.egg-info/
+*.egg
+
+# -----------------------
+# Jupyter
+# -----------------------
 .ipynb_checkpoints/
+.jupyter/
+*.nbconvert.ipynb
+
+# -----------------------
+# VSCode
+# -----------------------
+.vscode/
+.history/
+
+# -----------------------
+# Data (optional)
+# -----------------------
+/data/raw/*
+/data/processed/*
+!data/.gitkeep
+
