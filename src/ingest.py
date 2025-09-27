@@ -28,10 +28,12 @@ from urllib.parse import urlsplit
 import requests
 import boto3
 from botocore.exceptions import ClientError
-
+from dotenv import load_dotenv
 # -----------------------
 # Config
 # -----------------------
+load_dotenv()  # automatically loads .env into environment
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 RAW_DIR = ROOT / "data" / "raw"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
@@ -43,6 +45,8 @@ MBIE_ELECTRICITY_XLSX = (
 EMI_GENERATION_MD_INDEX = (
     "https://www.emi.ea.govt.nz/Wholesale/Datasets/Generation/Generation_MD"
 )
+
+
 
 # AWS
 S3_BUCKET = os.getenv("S3_BUCKET", "YOUR_S3_BUCKET_NAME_HERE")

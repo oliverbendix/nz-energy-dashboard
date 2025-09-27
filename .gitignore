@@ -42,3 +42,5 @@ venv/
 /data/processed/*
 !data/.gitkeep
 
+# Local environment
+.env
